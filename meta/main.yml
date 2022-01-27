@@ -1,0 +1,12 @@
+galaxy_info:
+  role_name: vm-benchmark-client
+  author: Aida - Stefania Manole
+  description: Ansible role to create the setup for a VictoriaMetrics benchmark experiment
+  license: license MIT
+  min_ansible_version: 2.1
+  platforms:
+  - name: Debian
+    versions:
+    - 9
+  galaxy_tags: []
+dependencies: []

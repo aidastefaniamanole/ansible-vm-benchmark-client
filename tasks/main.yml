@@ -1,0 +1,30 @@
+---
+  - name: Install git
+    apt:
+      name: git
+      state: present        
+      update_cache: yes
+    become: true
+
+  - name: Clone the data generation tool
+    ansible.builtin.git:
+      repo: https://github.com/aidastefaniamanole/tsbs.git
+      dest: /home/benchmarkclient/data-generation-tool
+      version: questdb-tsbs-load-new
+
+  - name: Copy the benchmark client jar file
+    copy:
+      src: "{{ benchmark_client_jar }}"
+      dest: /home/benchmarkclient/benchmark-client-tool
+
+  - name: Copy the script for creating the workload
+    copy:
+      src: create_workload.sh
+      dest: /home/benchmarkclient/create_workload.sh
+      mode: a+x # allow all users to run this script
+
+  - name: Copy the script for running the experiment
+    copy:
+      src: run_experiment.sh
+      dest: /home/benchmarkclient/run_experiment.sh
+      mode: a+x
