@@ -1,3 +1,3 @@
 #!/bin/bash
 
-java -Xmx2g -jar benchmark-client-tool -preloadPhaseDuration 10 -noWorkers 8 -workloadFile workload.txt -vmIpAddr $1
+java -Xmx2g -jar benchmark-client-tool -preloadPhaseDuration 10 -noWorkers 8 -workloadFile workload.txt -vmClusterIpAddr inventory_benchmark_client

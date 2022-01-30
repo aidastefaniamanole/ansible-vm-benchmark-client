@@ -17,6 +17,11 @@
       src: "{{ benchmark_client_jar }}"
       dest: /home/benchmarkclient/benchmark-client-tool
 
+  - name: Copy the inventory file with the cluster components IPs
+    copy:
+      src: "{{ benchmark_client_inventory }}"
+      dest: /home/benchmarkclient/inventory_benchmark_client
+
   - name: Copy the script for creating the workload
     copy:
       src: create_workload.sh
