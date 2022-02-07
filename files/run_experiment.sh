@@ -5,4 +5,4 @@ if [ $# -ne 1 ]; then
     exit 1
 fi
 
-java -Xmx8g -jar benchmark-client-tool -noWorkers $1 -workloadFile workload.txt -vmClusterIpAddr inventory_benchmark_client
+java -Xmx48g -jar benchmark-client-tool -noWorkers $1 -workloadFile workload.txt -vmClusterIpAddr inventory_benchmark_client
