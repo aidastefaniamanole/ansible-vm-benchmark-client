@@ -1,2 +1,2 @@
 ---
-benchmark_client_jar: "/home/stefania/IdeaProjects/vm-benchmarking-client/target/vm-benchmarking-client-1.0-SNAPSHOT-jar-with-dependencies.jar"
+benchmark_client_jar: "../../victoriametricsbenchmark/jars/vm-benchmarking-client-1.0-SNAPSHOT-jar-with-dependencies.jar"
